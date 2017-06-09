@@ -1,0 +1,29 @@
+{
+  "prompts": {
+    "name": {
+      "type": "input",
+      "required": true,
+      "message": "Project name"
+    },
+    "description": {
+      "type": "input",
+      "required": false,
+      "message": "Project description",
+      "default": "A react project"
+    },
+    "author": {
+      "type": "string",
+      "message": "Author"
+    }
+  },
+  "functions": {
+    "mobx": {
+      "type": "confirm",
+      "message": "use mobx?"
+    },
+    "redux": {
+      "type": "confirm",
+      "message": "use redux?"
+    }
+  }
+}
