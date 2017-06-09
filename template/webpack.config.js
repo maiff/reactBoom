@@ -60,7 +60,7 @@ if (DEV) {
 
 } else {
   rm('./dist/*')
-  config.plugins.push(new UglifyJSPlugin())
+  config.plugins.push(new webpack.optimize.UglifyJsPlugin())
   config.plugins.push(...[
     new webpack.optimize.CommonsChunkPlugin({
         name: 'vendor',
