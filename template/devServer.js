@@ -10,11 +10,14 @@ const server = new WebpackDevServer(compiler, {
   publicPath: webpackConfig.output.publicPath, /* ? */
   stats: {
     colors: true
-  }
+  },
+  proxy: {
+    '/api': {
+      target: 'http://localhost:8000/api/',
+      pathRewrite: {'^/api' : ''},
+      secure: false,
+  },
 })
-
-server.listen(port, function (err) {
-  err && console.log(err)
   // opn(`http://localhost:${port}`)
   console.log(`Starting server on http://localhost:${port}`)
 })
