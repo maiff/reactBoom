@@ -55,7 +55,7 @@ if (DEV) {
     'webpack-dev-server/client?http://localhost:8888',
     'webpack/hot/only-dev-server'
   );
-  config.output.publicPath = 'http://localhost:8888/dist/';
+  config.output.publicPath = 'http://localhost:8888/dist';
   config.plugins.push(new webpack.HotModuleReplacementPlugin());
 
 } else {

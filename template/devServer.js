@@ -16,8 +16,12 @@ const server = new WebpackDevServer(compiler, {
       target: 'http://localhost:8000/api/',
       pathRewrite: {'^/api' : ''},
       secure: false,
-  },
-})
-  // opn(`http://localhost:${port}`)
-  console.log(`Starting server on http://localhost:${port}`)
-})
+    },
+  }
+}).listen(port, function (err, result) {
+  if (err) {
+    return console.log(err)
+  }
+
+  console.log(`Listening at http://localhost:${port}/`)
+});
